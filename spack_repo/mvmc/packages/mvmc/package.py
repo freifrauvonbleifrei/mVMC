@@ -20,7 +20,6 @@ class Mvmc(CMakePackage):
     version("1.2.0", tag="v1.2.0", submodules=True)
     version("develop", branch="master", submodules=True)
 
-    variant("mpi", default=True, description="Enable MPI support")
     variant("scalapack", default=False, description="Enable ScaLAPACK support")
     variant(
         "pfaffian_blocked",
@@ -39,7 +38,7 @@ class Mvmc(CMakePackage):
     depends_on("fortran", type="build")
 
     depends_on("cmake@3.5:", type="build")
-    depends_on("mpi", when="+mpi")
+    depends_on("mpi")
     depends_on("lapack")
     depends_on("blas")
     depends_on("scalapack", when="+scalapack")
