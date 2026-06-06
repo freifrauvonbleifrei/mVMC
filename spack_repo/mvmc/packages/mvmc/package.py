@@ -18,7 +18,7 @@ class Mvmc(CMakePackage):
 
     version("1.3.0", tag="v1.3.0", submodules=True)
     version("1.2.0", tag="v1.2.0", submodules=True)
-    version("develop", branch="master", submodules=True)
+    version("develop", branch="develop", submodules=True)
 
     variant("scalapack", default=False, description="Enable ScaLAPACK support")
     variant(
